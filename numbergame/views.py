@@ -1,13 +1,14 @@
 from django.shortcuts import render
 import random
 
-''' genrate a random and check with a user 
-entered number and return a message'''
+
 
 def  guesss_number(request):
-	random_number = random.randint(1,999)
-	context = {'random_number' :random_number}
 
+	''' genrate a random and check with a user 
+	entered number and return a message'''
+	
+	random_number = random.randint(1,999)
 	if request.method == 'POST':
 		random_number = int(request.POST.get('random_number'))
 		guess_number = int(request.POST.get('guess_number'))
@@ -21,8 +22,8 @@ def  guesss_number(request):
 		else:
 			message = "wrong input" 
 	
-		
-		return render(request,'numbergame/result.html',{'message' :message})
+		context = {'message' :message}
+		return render(request,'numbergame/result.html',context)
 
-		
+	context = {'random_number' :random_number}	
 	return render(request, 'numbergame/index.html',context) 
