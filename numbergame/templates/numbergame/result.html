@@ -3,18 +3,20 @@
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="../static/numbergame/css/style.css">
 </head>
 <body>
-	<div class="container-fluid">
-			<div class="row">
-	    		<div class="col-sm-8"><h3> {{message}} </h3></div>
-				<div class="col-sm-4">
-					<a class="btn btn-info" role="button" href="{% url 'numbergame_url' %}">Play again </a>
-				</div>
-			</div>
-	</div>
+<div class="jumbotron">
+<div class="container">
+	<div class="row">
+<blockquote class="blockquote text-center">
+  <p class="mb-0"><samp>{{message}}</samp></p>
+  <br>
+  <div>
+  	<a class="btn btn-outline-dark"  href="{% url 'numbergame_url' %}">Play again </a> </div>
+</blockquote>
+</div>
+</div>
+</div>
+
 </body>
