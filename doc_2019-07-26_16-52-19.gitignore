@@ -1,0 +1,10 @@
+*.pyc
+*/*.pyc
+__pycache__/
+*.iml
+*.xml
+*.env
+/idea/*
+*/__pycache__/*.pyc
+*.swp
+*logs/*
